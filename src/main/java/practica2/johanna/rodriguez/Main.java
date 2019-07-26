@@ -21,16 +21,8 @@ public class Main {
 
 
         staticFiles.location("/templates");
-
-        ProcessBuilder process = new ProcessBuilder();
-        Integer port;
-        if (process.environment().get("PORT") != null) {
-            port = Integer.parseInt(process.environment().get("PORT"));
-        } else {
-            port = 8000;
-        }
-
-        setPort(port);
+        
+        setPort(8000);
 
 
         Configuration configuration = new Configuration(Configuration.VERSION_2_3_23);
