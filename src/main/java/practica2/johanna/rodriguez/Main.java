@@ -24,11 +24,11 @@ public class Main {
 
         ProcessBuilder process = new ProcessBuilder();
         Integer port;
-        //if (process.environment().get("PORT") != null) {
+        if (process.environment().get("PORT") != null) {
             port = Integer.parseInt(process.environment().get("PORT"));
-        //} else {
-            port = 8080;
-        //}
+        } else {
+            port = 8000;
+        }
 
         setPort(port);
 
